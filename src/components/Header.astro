@@ -1,3 +1,7 @@
+---
+import "../styles/global.css";
+---
+
 <header>
   <nav class="header-nav">
     <!-- Logo on the left -->
@@ -28,37 +32,54 @@
     </div>
   </nav>
 </header>
-header {
-  background-color: #f8f9fa; /* optional: light background */
-  padding: 1rem 2rem;
-}
 
-.header-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+<style>
+  header {
+    background-color: #f8f9fa;
+    padding: 1rem 2rem;
+  }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-  margin: 0;
-  padding: 0;
-}
+  .header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-.nav-links li a {
-  text-decoration: none;
-  font-weight: 600;
-  color: #333;
-}
+  .logo img {
+    height: 40px;
+  }
 
-.social-links {
-  display: flex;
-  gap: 1rem;
-}
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+  }
 
-.social-links img {
-  width: 24px;
-  height: 24px;
-}
+  .nav-links li a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+
+  .nav-links li a:hover {
+    color: #0077ff;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .social-links img {
+    width: 24px;
+    height: 24px;
+    transition: opacity 0.3s ease;
+  }
+
+  .social-links img:hover {
+    opacity: 0.7;
+  }
+</style>
