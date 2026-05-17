@@ -31,20 +31,27 @@
 
 <style>
   header {
-    background-color: #f8f9fa;
-    padding: 1rem 2rem;
+    background: linear-gradient(to bottom, #ffffff, #f0f0f0); /* gradient tab look */
+    padding: 1.5rem 3rem; /* taller bar */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* depth */
+    border-bottom: 2px solid #e0e0e0; /* subtle border */
+    border-radius: 0 0 12px 12px; /* rounded bottom corners */
+    position: sticky; /* stays visible when scrolling */
+    top: 0;
+    z-index: 1000;
   }
 
   .header-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
   .logo img {
-  height: 60px; 
-  width: auto; 
-  margin-left: 1rem;
+    height: 70px;
+    width: auto;
   }
 
   .nav-links {
@@ -59,11 +66,14 @@
     text-decoration: none;
     font-weight: 600;
     color: #333;
-    transition: color 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
   }
 
   .nav-links li a:hover {
-    color: #0077ff;
+    background-color: #0077ff;
+    color: #fff;
   }
 
   .social-links {
@@ -72,12 +82,12 @@
   }
 
   .social-links img {
-    width: 24px;
-    height: 24px;
-    transition: opacity 0.3s ease;
+    width: 28px;
+    height: 28px;
+    transition: transform 0.3s ease;
   }
 
   .social-links img:hover {
-    opacity: 0.7;
+    transform: scale(1.1);
   }
 </style>
