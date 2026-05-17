@@ -1,112 +1,171 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import Header from "../components/Header.astro";
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
+<Header />
 
-<main>
+<main class="profile-page">
   <!-- Hero Section -->
   <section class="hero">
-    <h1>Hi, I’m Jan 👋</h1>
-    <p>Social Media Manager & Content Creator based in Calamba, Laguna.</p>
-    <a href="/portfolio" class="cta">View My Work</a>
-  </section>
-
-  <!-- About Snapshot -->
-  <section class="about">
-    <h2>About Me</h2>
-    <p>
-      I help brands grow online through authentic content, video editing, and
-      social media strategy. With 5+ years of experience, I’ve managed campaigns
-      that drive engagement and results.
-    </p>
-  </section>
-
-  <!-- Portfolio Highlights -->
-  <section class="portfolio">
-    <h2>Featured Projects</h2>
-    <div class="grid">
-      <div class="card">Project 1</div>
-      <div class="card">Project 2</div>
-      <div class="card">Project 3</div>
+    <div class="hero-bg-text">SOCIALSWITHJAN</div>
+    <div class="profile">
+      <img src="/jan-profile.png" alt="Jan Profile" class="profile-img" />
+      <div class="profile-info">
+        <h1>Jan</h1>
+        <p>Social Media Manager & Content Creator</p>
+        <div class="social-icons">
+          <a href="https://facebook.com/yourhandle" target="_blank"><img src="/icons/facebook.svg" alt="Facebook" /></a>
+          <a href="https://instagram.com/yourhandle" target="_blank"><img src="/icons/instagram.svg" alt="Instagram" /></a>
+          <a href="https://linkedin.com/in/yourhandle" target="_blank"><img src="/icons/linkedin.svg" alt="LinkedIn" /></a>
+        </div>
+      </div>
     </div>
-    <a href="/portfolio" class="cta">See Full Portfolio</a>
   </section>
 
-  <!-- Services -->
-  <section class="services">
-    <h2>Work With Me</h2>
-    <ul>
-      <li>📱 Social Media Management</li>
-      <li>🎬 Video Editing (TikTok, Reels, Shorts)</li>
-      <li>🎨 Graphic Design & Branding</li>
-    </ul>
-    <a href="/work-with-me" class="cta">Let’s Collaborate</a>
+  <!-- Stats Section -->
+  <section class="stats">
+    <div class="stat-card">
+      <h3>Projects Completed</h3>
+      <p>59</p>
+    </div>
+    <div class="stat-card">
+      <h3>Brands Worked With</h3>
+      <p>71</p>
+    </div>
+    <div class="stat-card">
+      <h3>Avg Engagement Rate</h3>
+      <p>2.40%</p>
+    </div>
+  </section>
+
+  <!-- Media Section -->
+  <section class="media">
+    <h2>Media</h2>
+    <div class="media-grid">
+      <div class="media-item">Video 1</div>
+      <div class="media-item">Video 2</div>
+      <div class="media-item">Video 3</div>
+    </div>
   </section>
 </main>
 
 <style>
-  main {
-    padding: 2rem;
-    max-width: 1000px;
-    margin: 0 auto;
+  .profile-page {
+    background: radial-gradient(circle at top, #1a1a1a, #000);
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    padding-bottom: 4rem;
   }
 
   .hero {
+    position: relative;
     text-align: center;
     padding: 4rem 2rem;
-    background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+  }
+
+  .hero-bg-text {
+    font-size: 8rem;
+    font-weight: 900;
+    color: rgba(255, 255, 0, 0.15);
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+  }
+
+  .profile {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-img {
+    width: 220px;
     border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 0 20px rgba(255, 255, 0, 0.3);
   }
 
-  .hero h1 {
+  .profile-info h1 {
     font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-
-  .cta {
-    display: inline-block;
     margin-top: 1rem;
-    padding: 0.75rem 1.5rem;
-    background-color: #0077ff;
-    color: #fff;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background 0.3s ease;
   }
 
-  .cta:hover {
-    background-color: #005fcc;
+  .profile-info p {
+    font-size: 1.2rem;
+    color: #ccc;
   }
 
-  section {
+  .social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .social-icons img {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.3s ease;
+  }
+
+  .social-icons img:hover {
+    transform: scale(1.1);
+  }
+
+  .stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
     margin-top: 3rem;
   }
 
-  .grid {
+  .stat-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(255, 255, 0, 0.2);
+  }
+
+  .stat-card h3 {
+    font-size: 1rem;
+    color: #feda75;
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-card p {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .media {
+    margin-top: 4rem;
+    text-align: center;
+  }
+
+  .media h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #feda75;
+  }
+
+  .media-grid {
     display: flex;
+    justify-content: center;
     gap: 1rem;
   }
 
-  .card {
-    flex: 1;
-    background: #f0f0f0;
-    padding: 2rem;
+  .media-item {
+    width: 200px;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 8px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ccc;
   }
 </style>
-		<Footer />
-	</body>
-</html>
