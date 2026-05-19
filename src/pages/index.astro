@@ -4,168 +4,64 @@ import Header from "../components/Header.astro";
 
 <Header />
 
-<main class="profile-page">
-  <!-- Hero Section -->
+<main class="front-page">
+  <!-- Hero -->
   <section class="hero">
-    <div class="hero-bg-text">SOCIALSWITHJAN</div>
-    <div class="profile">
-      <img src="/jan-profile.png" alt="Jan Profile" class="profile-img" />
-      <div class="profile-info">
-        <h1>Jan</h1>
-        <p>Social Media Manager & Content Creator</p>
-        <div class="social-icons">
-          <a href="https://facebook.com/yourhandle" target="_blank"><img src="/icons/facebook.svg" alt="Facebook" /></a>
-          <a href="https://instagram.com/yourhandle" target="_blank"><img src="/icons/instagram.svg" alt="Instagram" /></a>
-          <a href="https://linkedin.com/in/yourhandle" target="_blank"><img src="/icons/linkedin.svg" alt="LinkedIn" /></a>
-        </div>
-      </div>
+    <h1>Let Your Brand Do the Storytelling</h1>
+    <p>Win customers, increase sales, and become memorable through story-driven designs & strategies.</p>
+    <a href="/contact" class="cta">Let’s Talk</a>
+  </section>
+
+  <!-- Services -->
+  <section class="services">
+    <h2>Services</h2>
+    <div class="grid">
+      <div class="card">Branding Strategy</div>
+      <div class="card">Logo Design</div>
+      <div class="card">Web Design & Development</div>
+      <div class="card">Motion Design</div>
+      <div class="card">Print & Package Design</div>
+      <div class="card">Shirt & Merchandise Design</div>
+      <div class="card">Email Marketing Design</div>
     </div>
   </section>
 
-  <!-- Stats Section -->
-  <section class="stats">
-    <div class="stat-card">
-      <h3>Projects Completed</h3>
-      <p>59</p>
-    </div>
-    <div class="stat-card">
-      <h3>Brands Worked With</h3>
-      <p>71</p>
-    </div>
-    <div class="stat-card">
-      <h3>Avg Engagement Rate</h3>
-      <p>2.40%</p>
-    </div>
+  <!-- About -->
+  <section class="about">
+    <h2>About</h2>
+    <p>More than visuals, our goal is to infuse purpose into your brand. We aim for real connections, loyal fans, and a thriving community.</p>
   </section>
 
-  <!-- Media Section -->
-  <section class="media">
-    <h2>Media</h2>
-    <div class="media-grid">
-      <div class="media-item">Video 1</div>
-      <div class="media-item">Video 2</div>
-      <div class="media-item">Video 3</div>
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <h2>Testimonials</h2>
+    <blockquote>
+      “Working with Jan was very easy. He created our logo, fonts, colors, and overall personality just as I visualized it.”
+      <footer>— Client Name, Business</footer>
+    </blockquote>
+    <blockquote>
+      “Jan’s attention to detail and branding process brought our vision to life way more than expected.”
+      <footer>— Client Name, Business</footer>
+    </blockquote>
+  </section>
+
+  <!-- Portfolio -->
+  <section class="portfolio">
+    <h2>Works</h2>
+    <div class="grid">
+      <div class="card">Project 1</div>
+      <div class="card">Project 2</div>
+      <div class="card">Project 3</div>
     </div>
+    <a href="/portfolio" class="cta">More Projects</a>
   </section>
 </main>
 
 <style>
-  .profile-page {
-    background: radial-gradient(circle at top, #1a1a1a, #000);
-    color: #fff;
-    font-family: 'Poppins', sans-serif;
-    padding-bottom: 4rem;
-  }
-
-  .hero {
-    position: relative;
-    text-align: center;
-    padding: 4rem 2rem;
-  }
-
-  .hero-bg-text {
-    font-size: 8rem;
-    font-weight: 900;
-    color: rgba(255, 255, 0, 0.15);
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 0;
-  }
-
-  .profile {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .profile-img {
-    width: 220px;
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(255, 255, 0, 0.3);
-  }
-
-  .profile-info h1 {
-    font-size: 2.5rem;
-    margin-top: 1rem;
-  }
-
-  .profile-info p {
-    font-size: 1.2rem;
-    color: #ccc;
-  }
-
-  .social-icons {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
-  }
-
-  .social-icons img {
-    width: 28px;
-    height: 28px;
-    transition: transform 0.3s ease;
-  }
-
-  .social-icons img:hover {
-    transform: scale(1.1);
-  }
-
-  .stats {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 3rem;
-  }
-
-  .stat-card {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    padding: 1.5rem 2rem;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(255, 255, 0, 0.2);
-  }
-
-  .stat-card h3 {
-    font-size: 1rem;
-    color: #feda75;
-    margin-bottom: 0.5rem;
-  }
-
-  .stat-card p {
-    font-size: 2rem;
-    font-weight: 700;
-  }
-
-  .media {
-    margin-top: 4rem;
-    text-align: center;
-  }
-
-  .media h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: #feda75;
-  }
-
-  .media-grid {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-  }
-
-  .media-item {
-    width: 200px;
-    height: 120px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #ccc;
-  }
+  .front-page { padding: 2rem; max-width: 1200px; margin: 0 auto; font-family: 'Poppins', sans-serif; }
+  .hero { text-align: center; padding: 4rem 2rem; background: linear-gradient(to bottom, #fff, #f8f9fa); border-radius: 12px; }
+  .cta { display:inline-block; margin-top:1rem; padding:0.75rem 1.5rem; background:#0077ff; color:#fff; border-radius:8px; text-decoration:none; font-weight:600; }
+  .grid { display:flex; flex-wrap:wrap; gap:1rem; }
+  .card { flex:1 1 250px; background:#f0f0f0; padding:1.5rem; border-radius:8px; text-align:center; }
+  .testimonials blockquote { background:#f9f9f9; padding:1rem; border-left:4px solid #0077ff; margin-bottom:1rem; }
 </style>
