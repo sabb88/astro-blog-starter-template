@@ -7,8 +7,8 @@ import Header from "../components/Header.astro";
 <main class="front-page">
   <!-- Hero -->
   <section class="hero">
-    <h1>Let Your Brand Do the Storytelling</h1>
-    <p>Win customers, increase sales, and become memorable through story-driven designs & strategies.</p>
+    <h1>Win hearts with your story.</h1>
+    <p>Let’s create a business where dream customers buy your products — no questions asked because your brand resonates with them.</p>
     <a href="/contact" class="cta">Let’s Talk</a>
   </section>
 
@@ -21,7 +21,7 @@ import Header from "../components/Header.astro";
       <div class="card">Web Design & Development</div>
       <div class="card">Motion Design</div>
       <div class="card">Print & Package Design</div>
-      <div class="card">Shirt & Merchandise Design</div>
+      <div class="card">Merchandise Design</div>
       <div class="card">Email Marketing Design</div>
     </div>
   </section>
@@ -29,7 +29,7 @@ import Header from "../components/Header.astro";
   <!-- About -->
   <section class="about">
     <h2>About</h2>
-    <p>More than visuals, our goal is to infuse purpose into your brand. We aim for real connections, loyal fans, and a thriving community.</p>
+    <p>Stand out & make memorable impressions with a well‑researched, professionally designed identity. We build brands that connect, convert, and thrive.</p>
   </section>
 
   <!-- Testimonials -->
@@ -45,7 +45,7 @@ import Header from "../components/Header.astro";
     </blockquote>
   </section>
 
-  <!-- Portfolio -->
+  <!-- Works -->
   <section class="portfolio">
     <h2>Works</h2>
     <div class="grid">
@@ -55,13 +55,20 @@ import Header from "../components/Header.astro";
     </div>
     <a href="/portfolio" class="cta">More Projects</a>
   </section>
+
+  <!-- CTA Footer -->
+  <section class="cta-footer">
+    <h2>Ready to create your story?</h2>
+    <a href="/contact" class="cta">I’m Ready! Let’s Chat</a>
+  </section>
 </main>
 
 <style>
   .front-page { padding: 2rem; max-width: 1200px; margin: 0 auto; font-family: 'Poppins', sans-serif; }
-  .hero { text-align: center; padding: 4rem 2rem; background: linear-gradient(to bottom, #fff, #f8f9fa); border-radius: 12px; }
+  .hero { text-align: center; padding: 4rem 2rem; }
   .cta { display:inline-block; margin-top:1rem; padding:0.75rem 1.5rem; background:#0077ff; color:#fff; border-radius:8px; text-decoration:none; font-weight:600; }
   .grid { display:flex; flex-wrap:wrap; gap:1rem; }
   .card { flex:1 1 250px; background:#f0f0f0; padding:1.5rem; border-radius:8px; text-align:center; }
   .testimonials blockquote { background:#f9f9f9; padding:1rem; border-left:4px solid #0077ff; margin-bottom:1rem; }
+  .cta-footer { text-align:center; padding:3rem 2rem; background:#f8f9fa; border-radius:12px; margin-top:3rem; }
 </style>
